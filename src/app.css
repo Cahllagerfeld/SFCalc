@@ -1,0 +1,13 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	background-color: #f0ba3a;
+}
+
+.container {
+	max-width: 1440px;
+	margin: 10px auto;
+}
