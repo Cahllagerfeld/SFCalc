@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { NavItem } from '../../interfaces/NavItem';
+	import type { NavItem } from '../../interfaces/Navigation';
 	import { page } from '$app/stores';
 
 	export let NavItem: NavItem;

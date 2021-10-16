@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { NavItem } from '../../interfaces/NavItem';
+	import type { NavItem } from '../../interfaces/Navigation';
 
 	let navbarItems: NavItem[] = [
 		{ key: 1, label: 'Mission', path: '/' },

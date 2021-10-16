@@ -8,11 +8,13 @@
 </header>
 
 <div class="template">
-	<slot />
+	<div class="w-full h-screen">
+		<slot />
+	</div>
 </div>
 
 <style type="text/postcss">
 	.template {
-		padding-left: 117px;
+		margin-left: 117px;
 	}
 </style>
