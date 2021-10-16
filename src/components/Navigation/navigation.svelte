@@ -1,10 +1,7 @@
 <script lang="ts">
 	import type { NavItem } from '../../interfaces/Navigation';
 
-	let navbarItems: NavItem[] = [
-		{ key: 1, label: 'Mission', path: '/' },
-		{ key: 2, label: 'Baui', path: '/test' }
-	];
+	let navbarItems: NavItem[] = [{ key: 1, label: 'Mission', path: '/' }];
 	import NavigationItem from './navigation-item.svelte';
 </script>
 

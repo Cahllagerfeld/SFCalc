@@ -25,6 +25,6 @@
 	}
 
 	.is-active {
-		@apply text-primary;
+		@apply text-primary hover:text-primary;
 	}
 </style>

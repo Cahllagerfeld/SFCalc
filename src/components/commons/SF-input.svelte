@@ -5,6 +5,9 @@
 <script lang="ts">
 	export let label: string;
 	export let theme: string = 'primary';
+	export let type: string = 'text';
+	export let min: number = undefined;
+	export let max: number = undefined;
 	const id = label + counter++;
 
 	const allowedThemes = ['primary', 'secondary', 'tertiary'];
@@ -13,7 +16,7 @@
 </script>
 
 <div style="position: relative;">
-	<input placeholder="" class={`sf-input sf-input-${validatedTheme}`} {id} type="text" />
+	<input placeholder="" {min} {max} {type} class={`sf-input sf-input-${validatedTheme}`} {id} />
 	<label class="sf-label " for={id}>{label}</label>
 </div>
 
@@ -26,7 +29,7 @@
 		outline: none;
 		padding: 1.25rem;
 		background: none;
-		@apply relative h-full text-white;
+		@apply relative h-full text-white font-semibold;
 	}
 
 	.sf-label {
