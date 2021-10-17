@@ -6,4 +6,6 @@
 <SfInput label="Text" theme="secondary" type="number" />
 <SfInput label="Text" theme="tertiary" />
 
-<SfRadio />
+<SfRadio label="Gold" name="inputs" />
+<SfRadio label="XP" name="inputs" />
+<SfRadio label="Overall" name="inputs" />

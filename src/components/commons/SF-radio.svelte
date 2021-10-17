@@ -1,74 +1,49 @@
-<div>
-	<input id="baui" type="radio" name="test" />
-	<label for="baui">Baui</label>
-</div>
-<div>
-	<input id="test2" type="radio" name="test" />
-	<label for="test2">Baui</label>
-</div>
+<script context="module">
+	let counter = 0;
+</script>
+
+<script lang="ts">
+	export let label: string;
+	export let name: string = undefined;
+
+	const id = label + counter++;
+</script>
+
+<label for={id} class="radio">
+	<input type="radio" {name} {id} class="radio__input" />
+	<div class="radio__radio" />
+	{label}
+</label>
 
 <style type="text/postcss">
-	.form {
-		display: flex;
-	}
-	input {
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-		border: none;
-		border-radius: 0;
-		font-size: 1em;
-		width: 100%;
-	}
-
-	input[type='radio'] {
-		width: auto;
-		float: left;
-		margin-right: 0.75em;
-		background: transparent;
-		border: none;
-		margin-top: 5px;
-	}
-
-	input[type='radio']:checked,
-	input[type='radio']:not(:checked) {
-		background: var(--dark);
-		position: relative;
-		visibility: hidden;
-		margin: 0;
-		padding: 0;
-	}
-
-	input[type='radio'] + label {
-		cursor: pointer;
+	.radio {
+		margin-right: 10px;
 		font-size: 1.5rem;
+		@apply inline-flex items-center cursor-pointer;
 	}
 
-	input[type='radio']:checked + label::before,
-	input[type='radio']:not(:checked) + label::before {
-		content: ' ';
-		display: inline-block;
-		width: 34px;
-		height: 34px;
-		position: relative;
-		border: 2px solid #bbb;
-		background: var(--dark);
-		margin-right: 1em;
-		box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+	.radio__input {
+		display: none;
 	}
 
-	input[type='radio']:checked + label::before,
-	input[type='radio']:not(:checked) + label::before {
-		border-radius: 30px;
+	.radio__radio {
+		width: 1.25em;
+		height: 1.25em;
+		border: 2px solid white;
+		box-sizing: border-box;
+		padding: 4px;
+		@apply rounded-full mr-2;
 	}
 
-	input[type='radio']:hover + label::before {
-		background: rgba(255, 228, 0, 0.5);
-		box-shadow: inset 0 0 0 7px var(--dark);
-	}
-
-	input[type='radio']:checked + label::before {
+	.radio__radio::after {
+		content: '';
 		background: var(--primary);
-		box-shadow: inset 0 0 0 7px var(--dark);
+		transform: scale(0);
+		transition: transform 0.15s;
+		@apply w-full h-full block rounded-full;
+	}
+
+	.radio__input:checked + .radio__radio::after {
+		transform: scale(1);
 	}
 </style>
