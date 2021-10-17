@@ -12,7 +12,7 @@
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-3">
-	<div><div class="w-11"><Mission /></div></div>
+	<div><Mission /></div>
 	<div class="outline-secondary ">Hallo Welt</div>
 	<div class="outline-tertiary ">Hallo Welt</div>
 </div>

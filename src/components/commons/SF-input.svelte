@@ -15,7 +15,7 @@
 	$: validatedTheme = allowedThemes.includes(theme) ? theme : 'primary';
 </script>
 
-<div style="position: relative;">
+<div class="relative">
 	<input placeholder="" {min} {max} {type} class={`sf-input sf-input-${validatedTheme}`} {id} />
 	<label class="sf-label " for={id}>{label}</label>
 </div>
@@ -29,7 +29,7 @@
 		outline: none;
 		padding: 1.25rem;
 		background: none;
-		@apply relative h-full text-white font-semibold;
+		@apply h-full text-white font-semibold;
 	}
 
 	.sf-label {
