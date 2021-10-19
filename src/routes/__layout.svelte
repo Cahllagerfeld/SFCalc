@@ -8,13 +8,13 @@
 </header>
 
 <div class="template">
-	<div class="w-full h-screen">
+	<div class="w-full h-full">
 		<slot />
 	</div>
 </div>
 
 <style type="text/postcss">
 	.template {
-		margin-left: 117px;
+		@apply ml-0 md:ml-navbar;
 	}
 </style>

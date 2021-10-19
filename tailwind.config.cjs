@@ -4,6 +4,9 @@ const config = {
 
 	theme: {
 		extend: {
+			spacing: {
+				navbar: '117px'
+			},
 			fontFamily: {
 				primary: ['Raleway', 'sans-serif']
 			},

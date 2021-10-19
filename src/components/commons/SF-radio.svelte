@@ -6,11 +6,14 @@
 	export let label: string;
 	export let name: string = undefined;
 
+	export let group: any = undefined;
+	export let value: any = undefined;
+
 	const id = label + counter++;
 </script>
 
 <label for={id} class="radio">
-	<input type="radio" {name} {id} class="radio__input" />
+	<input bind:group {value} type="radio" {name} {id} class="radio__input" />
 	<div class="radio__radio" />
 	{label}
 </label>

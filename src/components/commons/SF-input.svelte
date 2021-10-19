@@ -1,22 +1,23 @@
 <script context="module">
-	let counter = 0;
+	let counter = 1000;
 </script>
 
 <script lang="ts">
 	export let label: string;
 	export let theme: string = 'primary';
-	export let type: string = 'text';
 	export let min: number = undefined;
 	export let max: number = undefined;
 	const id = label + counter++;
+
+	export let value = undefined;
 
 	const allowedThemes = ['primary', 'secondary', 'tertiary'];
 
 	$: validatedTheme = allowedThemes.includes(theme) ? theme : 'primary';
 </script>
 
-<div class="relative">
-	<input placeholder="" {min} {max} {type} class={`sf-input sf-input-${validatedTheme}`} {id} />
+<div class="relative m-4">
+	<input placeholder="" {min} {max} bind:value class={`sf-input sf-input-${validatedTheme}`} {id} />
 	<label class="sf-label " for={id}>{label}</label>
 </div>
 
@@ -25,11 +26,10 @@
 		border: 2px solid white;
 		border-radius: 1rem;
 		font-family: inherit;
-		font-size: inherit;
 		outline: none;
 		padding: 1.25rem;
 		background: none;
-		@apply h-full text-white font-semibold;
+		@apply h-full text-white font-semibold text-lg;
 	}
 
 	.sf-label {

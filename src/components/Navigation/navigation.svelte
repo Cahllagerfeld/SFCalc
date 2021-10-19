@@ -19,11 +19,11 @@
 	.nav {
 		width: 117px;
 		background-color: #2c2c2c;
-		@apply top-0 block h-screen absolute;
+		@apply top-0 block h-full invisible min-h-screen relative float-left sm:visible;
 	}
 
 	.nav__block {
 		left: calc(50% - 35px);
-		@apply block absolute;
+		@apply block h-full;
 	}
 </style>
