@@ -22,10 +22,9 @@ const config = {
 			fallback: null
 		}),
 		paths: {
-			base: dev ? '' : '/SFCalc',
-			assets: dev ? '' : '/SFCalc',
+			base: dev ? '' : '/SFCalc'
 		},
-		appDir: 'internal',
+		appDir: 'internal'
 	}
 };
 
