@@ -23,6 +23,7 @@ const config = {
 		}),
 		paths: {
 			base: dev ? '' : '/SFCalc',
+			assets: dev ? '' : '/SFCalc',
 		},
 		appDir: 'internal',
 	}
