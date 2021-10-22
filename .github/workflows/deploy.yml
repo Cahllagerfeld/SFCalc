@@ -21,6 +21,9 @@ jobs:
       - name: build docs
         run: yarn build
 
+      - name: bypass jekyll
+        run: touch ./build/.nojekyll
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
