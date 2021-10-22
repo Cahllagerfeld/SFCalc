@@ -1,13 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
 /* Write your global styles here, in PostCSS syntax */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html {
-	background-color: #f0ba3a;
+:root {
+	--dark: #272727;
+	--primary-text: #747474;
+	--primary: #ffe400;
+	--secondary: #ff652f;
+	--tertiary: #14a76c;
 }
 
-.container {
-	max-width: 1440px;
-	margin: 10px auto;
+@layer components {
+	.outline-primary {
+		color: var(--dark);
+		text-shadow: -1px -1px 0 var(--primary), 1px -1px 0 var(--primary), -1px 1px 0 var(--primary),
+			1px 1px 0 var(--primary);
+	}
+	.outline-secondary {
+		color: var(--dark);
+		text-shadow: -1px -1px 0 var(--secondary), 1px -1px 0 var(--secondary),
+			-1px 1px 0 var(--secondary), 1px 1px 0 var(--secondary);
+	}
+	.outline-tertiary {
+		color: var(--dark);
+		text-shadow: -1px -1px 0 var(--tertiary), 1px -1px 0 var(--tertiary), -1px 1px 0 var(--tertiary),
+			1px 1px 0 var(--tertiary);
+	}
+}
+
+@layer utilities {
+	.grayscale {
+		-webkit-filter: grayscale(1);
+	}
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+}
+
+html {
+	@apply bg-dark;
+	font-size: 14px;
+	color: white;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
 }

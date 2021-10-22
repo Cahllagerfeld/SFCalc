@@ -3,7 +3,21 @@ const config = {
 	purge: ['./src/**/*.{html,js,svelte,ts}'],
 
 	theme: {
-		extend: {}
+		extend: {
+			spacing: {
+				navbar: '117px'
+			},
+			fontFamily: {
+				primary: ['Raleway', 'sans-serif']
+			},
+			colors: {
+				dark: 'var(--dark)',
+				'primary-text': 'var(--primary-text)',
+				primary: 'var(--primary)',
+				secondary: 'var(--secondary)',
+				tertiary: 'var(--tertiary)'
+			}
+		}
 	},
 
 	plugins: []
