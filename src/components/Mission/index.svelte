@@ -11,22 +11,38 @@
 
 	let mission1gold: number;
 	let mission1xp: number;
-	let mission1time: number;
+	let mission1time: string;
 
 	let mission2gold: number;
 	let mission2xp: number;
-	let mission2time: number;
+	let mission2time: string;
 
 	let mission3gold: number;
 	let mission3xp: number;
-	let mission3time: number;
+	let mission3time: string;
 
 	let grayScaleObserver: number = null;
 
 	const performCalculation = () => {
-		const mission1 = MissionCalcInstance.calcOverall(mission1gold, mission1xp, mission1time);
-		const mission2 = MissionCalcInstance.calcOverall(mission2gold, mission2xp, mission2time);
-		const mission3 = MissionCalcInstance.calcOverall(mission3gold, mission3xp, mission3time);
+		const mission1ConvertedTime = MissionCalcInstance.convertMinutestoSeconds(mission1time);
+		const mission2ConvertedTime = MissionCalcInstance.convertMinutestoSeconds(mission2time);
+		const mission3ConvertedTime = MissionCalcInstance.convertMinutestoSeconds(mission3time);
+
+		const mission1 = MissionCalcInstance.calcOverall(
+			mission1gold,
+			mission1xp,
+			mission1ConvertedTime
+		);
+		const mission2 = MissionCalcInstance.calcOverall(
+			mission2gold,
+			mission2xp,
+			mission2ConvertedTime
+		);
+		const mission3 = MissionCalcInstance.calcOverall(
+			mission3gold,
+			mission3xp,
+			mission3ConvertedTime
+		);
 
 		const calculationResults: CalculationSort[] = [
 			{ ...mission1, id: 1 },

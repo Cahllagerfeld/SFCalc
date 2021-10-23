@@ -28,6 +28,17 @@ export default class MissionCalc {
 		return ratio;
 	}
 
+	public convertMinutestoSeconds(timeString: string) {
+		if (timeString.includes(":")) {
+			const [minutes, seconds] = timeString.split(":");
+			const returnValue = parseInt(minutes) * 60 + parseInt(seconds)
+			return returnValue
+		}
+		else {
+			return parseInt(timeString)
+		}
+	}
+
 	public sortCalculation(calcResult: CalculationSort[], radio: number): number {
 		let maxValue: number = null;
 		let result: CalculationSort = null;
