@@ -12,6 +12,7 @@
 
 <style type="text/postcss">
 	.template {
-		@apply ml-0 md:ml-navbar;
+		background-image: url(/images/background.png);
+		@apply ml-0 md:ml-navbar h-full bg-cover min-h-screen;
 	}
 </style>
