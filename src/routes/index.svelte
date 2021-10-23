@@ -3,6 +3,3 @@
 </script>
 
 <Mission />
-
-<style type="text/postcss">
-</style>

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { NavItem } from '../../interfaces/Navigation';
 	import { page } from '$app/stores';
+	import { base } from '$app/paths';
 
 	export let NavItem: NavItem;
 	$: isActive =
@@ -8,7 +9,7 @@
 </script>
 
 <li>
-	<a href={NavItem.path} class:is-active={isActive}>{NavItem.label}</a>
+	<a href={base + '/' + NavItem.path} class:is-active={isActive}>{NavItem.label}</a>
 </li>
 
 <style type="text/postcss">
