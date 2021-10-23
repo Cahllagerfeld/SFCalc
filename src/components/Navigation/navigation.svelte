@@ -17,9 +17,8 @@
 
 <style type="text/postcss">
 	.nav {
-		width: 117px;
 		background-color: #2c2c2c;
-		@apply top-0 block h-full invisible min-h-screen relative float-left sm:visible;
+		@apply top-0 w-navbar  h-full hidden min-h-screen relative float-left sm:block;
 	}
 
 	.nav__block {
