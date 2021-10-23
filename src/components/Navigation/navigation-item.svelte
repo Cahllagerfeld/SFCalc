@@ -9,7 +9,7 @@
 </script>
 
 <li>
-	<a href={base + '/' + NavItem.path} class:is-active={isActive}>{NavItem.label}</a>
+	<a href={base + NavItem.path} class:is-active={isActive}>{NavItem.label}</a>
 </li>
 
 <style type="text/postcss">
