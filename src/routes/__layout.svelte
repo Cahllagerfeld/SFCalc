@@ -3,10 +3,7 @@
 	import Navigation from '../components/Navigation/navigation.svelte';
 </script>
 
-<header>
-	<Navigation />
-</header>
-
+<Navigation />
 <div class="template">
 	<div class="w-full h-full">
 		<slot />
