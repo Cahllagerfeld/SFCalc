@@ -59,7 +59,7 @@
 	<div class="grid grid-cols-1 md:grid-cols-3">
 		<div>
 			<div
-				class="flex justify-center flex-col items-center"
+				class="flex justify-center flex-col items-center  md:border-right"
 				class:grayscale={grayScaleObserver != 1 && grayScaleObserver}
 			>
 				<div class="outline-primary text-4xl">Mission 1</div>
@@ -70,7 +70,7 @@
 		</div>
 		<div>
 			<div
-				class="flex justify-center flex-col items-center"
+				class="flex justify-center flex-col items-center md:border-right"
 				class:grayscale={grayScaleObserver != 2 && grayScaleObserver}
 			>
 				<div class="outline-secondary text-4xl">Mission 2</div>
@@ -100,3 +100,6 @@
 	</div>
 	<SfButton click={performCalculation} label="Berechne" />
 </div>
+
+<style type="text/postcss">
+</style>
